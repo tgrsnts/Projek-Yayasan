@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="style.css" />
+
+  <!--=============== ICON ===============-->
+  <link rel="shortcut icon" href="images/logo.png" />
+
+  <!--=============== Tailwind ===============-->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!--=============== Fontawesome ===============-->
+  <script src="https://kit.fontawesome.com/f87eaab4e6.js" crossorigin="anonymous"></script>
+
+  <title>Yayasan Darusaa'adah Mubarakah</title>
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container__">
+      <a href="#" class="nav__logo">
+        <img src="images/logo.png" class="w-16 inline me-2 p-3" alt="">
+        <div class="hidden lg:inline">Daarussa’adah Mubarakah
+        </div>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="index.html" class="nav__link">Beranda</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="tentang_kami.html" class="nav__link">Tentang Kami</a>
+          </li>
+
+          <li class="nav__dropdown">
+            <a href="#" class="nav__dropdown__title">Layanan <i class="ri-arrow-drop-down-line"></i></a>
+            <ul class="nav__dropdown__list">
+              <li class="nav__dropdown__item">
+                <a href="zakat.html" class="nav__dropdown__link">Zakat</a>
+              </li>
+              <li class="nav__dropdown__item">
+                <a href="donasi.html" class="nav__dropdown__link">Donasi</a>
+              </li>
+              <li class="nav__dropdown__item">
+                <a href="faq.html" class="nav__dropdown__link">FAQ</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav__item">
+            <a href="blog.html" class="nav__link">Blog</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="kontak.html" class="nav__link">Kontak</a>
+          </li>
+        </ul>
+
+        <!-- Close button -->
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+
+      <div class="nav__actions">
+        <!-- Search button -->
+        <i class="ri-search-line nav__search" id="search-btn"></i>
+
+        <!-- Login button -->
+        <i class="ri-user-line nav__login" id="login-btn"></i>
+
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== SEARCH ====================-->
+  <div class="search" id="search">
+    <form action="" class="search__form">
+      <i class="ri-search-line search__icon"></i>
+      <input type="search" placeholder="What are you looking for?" class="search__input" />
+    </form>
+
+    <i class="ri-close-line search__close" id="search-close"></i>
+  </div>
+
+  <!--==================== LOGIN ====================-->
+  <div class="login" id="login">
+    <form action="" class="login__form">
+      <h2 class="login__title">Log In</h2>
+
+      <div class="login__group">
+        <div>
+          <label for="email" class="login__label">Email</label>
+          <input type="email" placeholder="Write your email" id="email" class="login__input" />
+        </div>
+
+        <div>
+          <label for="password" class="login__label">Password</label>
+          <input type="password" placeholder="Enter your password" id="password" class="login__input" />
+        </div>
+      </div>
+
+      <div>
+        <p class="login__signup">
+          You do not have an account? <a href="#">Sign up</a>
+        </p>
+
+        <a href="#" class="login__forgot"> You forgot your password </a>
+
+        <button type="submit" class="login__button">Log In</button>
+      </div>
+    </form>
+
+    <i class="ri-close-line login__close" id="login-close"></i>
+  </div>
+
+  <!--==================== SLIDER====================-->
+  <div class="slider">
+    <div class="list">
+      <div class="item">
+        <img src="images/slide1.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="images/slide2.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="images/slide3.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="images/slide4.png" alt="" />
+      </div>
+      <div class="item">
+        <img src="images/slide5.png" alt="" />
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev">
+        <
+      </button>
+      <button id="next">></button>
+    </div>
+    <ul class="dots">
+      <li class="active"></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <div class="my-[100px]">
+    <div class="text-center text-2xl font-bold mb-5">Kegiatan Kami</div>
+    <div class="text-center mb-5">
+      <p>Melalui berbagai kegiatan pemberdayaan, Yayasan Daarussa'adah Mubarokah berupaya mewujudkan kebahagian kepada seluruh masyarakat</p>
+    </div>
+    <div class="w-full p-5 flex justify-center">
+      <div class="flex flex-wrap justify-center gap-5">
+        <div class="flex flex-col w-full lg:w-96 gap-2 m-3 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
+          <div class="h-45">
+            <img src="images/1.png" class="h-full rounded-t-lg" />
+          </div>
+          <div class="px-5 pt-5 text-2xl text-center font-bold">
+            Program Pendidikan Mengajar Paud
+          </div>
+          <div class="p-5 text-justify">
+            Kami menghadirkan pendidikan agama Islam yang mendalam, disesuaikan
+            dengan perkembangan anak usia dini. Melalui metode belajar yang
+            interaktif dan menyenangkan, anak-anak kami belajar menghafal
+            surah-surah pendek, memahami nilai-nilai Islam, dan mempraktikkan
+            adab-adab yang baik dalam kehidupan sehari-hari.
+          </div>
+          <!-- <div class="px-6 pt-4 pb-5 mt-auto">
+            <div class="flex items-center justify-center">
+              <button class="bg-first rounded-lg px-4 py-2 text-white">
+                <a href="zakat-fitrah.html"> Selengkapnya </a>
+              </button>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 m-3 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
+          <div class="h-45">
+            <img src="images/2.png" class="h-full rounded-t-lg" />
+          </div>
+          <div class="px-5 pt-5 text-2xl text-center font-bold">
+            Pembangunan Mesjid Daarussa'adah Mubarokah
+          </div>
+          <div class="p-5 text-justify">
+            Pembangunan masjid ini merupakan salah satu langkah menuju
+            kemajuan Pondok Pesantren. Masjid ini akan menjadi tempat suci
+            yang menjadi pusat ibadah dan berbagai kegiatan positif untuk
+            para santri dan santriwati. Mari bersama-sama kita mewujudkan
+            masjid ini sebagai simbol keberkahan dan kedamaian di Pondok
+            Pesantren Tahfidz Qur'an.
+          </div>
+          <!-- <div class="px-6 pt-4 pb-5 mt-auto">
+            <div class="flex items-center justify-center">
+              <button class="bg-first rounded-lg px-4 py-2 text-white">
+                <a href="zakat-fitrah.html"> Selengkapnya </a>
+              </button>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 m-3 rounded-lg shadow-lg transition duration-300 hover:shadow-2xl">
+          <div class="h-45">
+            <img src="images/3.png" class="h-full rounded-t-lg" />
+          </div>
+          <div class="px-5 pt-5 text-2xl text-center font-bold">
+            Pembangunan Pesantren Daarussa'adah Mubarokah
+          </div>
+          <div class="p-5 text-justify">
+            Pondok Pesantren Tahfidz Qur'an didirikan sebagai sarana pendidikan
+            sekaligus memperdalam agama Islam untuk membuka pintu keemasan dan
+            melahirkan generasi-genarasi pecinta Al-Qur'an dengan
+            karakter yang mulia.
+          </div>
+          <!-- <div class="px-6 pt-4 pb-5 mt-auto">
+            <div class="flex items-center justify-center">
+              <button class="bg-first rounded-lg px-4 py-2 text-white">
+                <a href="zakat-fitrah.html"> Selengkapnya </a>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-[100px] p-5">
+    <div class="text-center text-2xl font-bold mb-5">Galeri</div>
+    <!-- <div class="text-center mb-5">
+      <p>Melalui berbagai kegiatan pemberdayaan, Yayasan Daarussa'adah Mubarokah berupaya mewujudkan kebahagian kepada seluruh masyarakat</p>
+    </div> -->
+    <div class="w-full p-5 flex justify-center">
+      <div class="flex flex-wrap justify-center gap-5">
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto1.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto2.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto3.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto1.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto2.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full lg:w-96 gap-2 rounded-lg shadow-lg transition duration-300 hover:scale-105">
+          <div class="h-45">
+            <img src="images/foto3.jpg" class="h-full rounded-lg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="w-full mt-[100px] mb-[50px] p-5 space-y-3">
+    <div class="flex-stretch text-center font-bold">
+      MARI BERBAGI UNTUK <br />
+      YAYASAN DAARUSSA’ADAH MUBAROKAH
+    </div>
+    <div class="flex justify-center">
+      <button class="bg-first px-4 py-2 rounded text-white">
+        Donasi sekarang!
+      </button>
+    </div>
+  </div> -->
+
+  <footer class="py-8 bg-gray-900 text-white">
+    <div class="container mx-auto flex flex-wrap">
+      <!-- Kolom Pertama -->
+      <div class="w-full lg:w-2/6 px-4">
+        <h3 class="text-xl font-landing font-bold mb-4">
+          Yayasan Daarussa'adah Mubarokah
+        </h3>
+        <p class="font-landing text-gray-300 mb-4">
+          Yayasan Daarussa’adah Mubarokah merupakan sebuah lembaga yang
+          bergerak dalam bidang pendidikan, sosial dan keagamaan. Berlokasi di jalan
+          Rawamangun Utara II RT 011 RW 01 no. 24, Kelurahan Rawasari,
+          Kecamatan Cempaka Putih, Jakarta Pusat.
+        </p>
+      </div>
+      <!-- Kolom Kedua -->
+      <div class="w-full lg:w-2/6 px-4">
+        <h3 class="text-xl font-landing font-bold mb-4">Hubungi Kami</h3>
+        <div class="flex items-center mb-4">
+          <i class="fa-solid fa-phone h-6 w-6 mr-2"></i>
+          <span class="font-landing">+62 87891987242</span>
+        </div>
+        <div class="flex items-center mb-4">
+          <i class="fa-solid fa-envelope h-6 w-6 mr-2"></i>
+          <span class="font-landing">yayasandarussadah@gmail.com</span>
+        </div>
+        <div class="flex items-center mt-2">
+          <i class="fa-solid fa-house h-6 w-6 mr-2"></i>
+          <span class="font-landing">Alamat: Jalan Rawamangun Utara II RT 011 RW 01 no. 24, Kelurahan Rawasari,
+            Kecamatan Cempaka Putih, Jakarta Pusat.</span>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/6 px-4">
+        <h3 class="text-xl font-landing font-bold mb-4">REKENING DONASI</h3>
+        <div class="flex items-center mb-4">
+          <span class="font-landing">Bank Syariah Indonesia (BSI) | 4500003341</span>
+        </div>
+      </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="app.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="main.js"></script>
+  <script src="tailwind.config.js"></script>
+</body>
+
+</html>
