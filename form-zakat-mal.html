@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--=============== ICON ===============-->
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <!--=============== Tailwind ===============-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--=============== Fontawesome ===============-->
+    <script src="https://kit.fontawesome.com/f87eaab4e6.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <title>Yayasan Darusaa'adah Mubarakah </title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container__">
+            <a href="#" class="nav__logo">
+                <img src="images/logo.png" class="w-16 inline me-2" alt="">
+                Daarussa’adah Mubarakah
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Beranda</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="tentang_kami.html" class="nav__link">Tentang Kami</a>
+                    </li>
+
+                    <li class="nav__dropdown">
+                        <a href="#" class="nav__dropdown__title">Layanan <i class="ri-arrow-drop-down-line"></i></a>
+                        <ul class="nav__dropdown__list">
+                            <li class="nav__dropdown__item"><a href="zakat-fitrah.html"
+                                    class="nav__dropdown__link">Zakat Fitrah</a>
+                            </li>
+                            <li class="nav__dropdown__item"><a href="zakat-mal.html" class="nav__dropdown__link">Zakat
+                                    Mal</a></li>
+                            <li class="nav__dropdown__item"><a href="donasi.html" class="nav__dropdown__link">Donasi</a>
+                            </li>
+                            <!-- <li class="nav__dropdown__item"><a href="faq.html" class="nav__dropdown__link">FAQ</a></li> -->
+                        </ul>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Blog</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="kontak.html" class="nav__link">Kontak</a>
+                    </li>
+                </ul>
+
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__actions">
+                <!-- Search button -->
+                <!-- <i class="ri-search-line nav__search" id="search-btn"></i> -->
+
+                <!-- Login button -->
+                <i class="ri-user-line nav__login" id="login-btn"></i>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search">
+        <form action="" class="search__form">
+            <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+        </form>
+
+        <i class="ri-close-line search__close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN ====================-->
+    <div class="login" id="login">
+        <form action="" class="login__form">
+            <h2 class="login__title">Log In</h2>
+
+            <div class="login__group">
+                <div>
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" placeholder="Write your email" id="email" class="login__input">
+                </div>
+
+                <div>
+                    <label for="password" class="login__label">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password" class="login__input">
+                </div>
+            </div>
+
+            <div>
+                <p class="login__signup">
+                    You do not have an account? <a href="#">Sign up</a>
+                </p>
+
+                <a href="#" class="login__forgot">
+                    You forgot your password
+                </a>
+
+                <button type="submit" class="login__button">Log In</button>
+            </div>
+        </form>
+
+        <i class="ri-close-line login__close" id="login-close"></i>
+    </div>
+
+    <div class="w-3/4 mb-[100px] mx-auto drop-shadow">
+        <a href="">
+            <img src="images/header-form-zakat-mal.jpg" alt="">
+        </a>
+        <div class="flex flex-col p-10 bg-white">
+            <div class="font-bold text-black text-2xl text-center">TUNAIKAN ZAKAT MAAL ANDA</div>
+            <div class="font-bold text-black text-2xl mb-5 text-center">DENGAN AMAN DAN MUDAH</div>
+            <div class="flex flex-col items-center border-2 p-5">
+                <div class="font-bold text-black text-2xl mb-5 text-center">FORM ZAKAT MAAL</div>
+                <div class="w-full flex justify-center mb-5">
+                    <div class="w-full flex justify-center border-b-2 border-black">
+                        <button class="text-xl text-black">Bayar</button>
+                    </div>
+                    <div class="w-full flex justify-center">
+                        <button class="text-xl text-black">Kalkulator</button>
+                    </div>
+                </div>
+                <form id="formZakatMal" action="" class="flex flex-col items-center hidden">
+                    <div class="w-full mb-7">
+                        <input type="text" placeholder="Nama Lengkap" class="w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="radio" name="jk" id="jk1" value="Laki-laki">
+                        <label for="jk1">Laki-laki</label>
+                        <input type="radio" name="jk" id="jk2" value="Perempuan">
+                        <label for="jk1">Perempuan</label>
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="text" placeholder="Bin / Binti" class="w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="number" placeholder="Nominal" class="w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="text" placeholder="No. Telepon" class="w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="email" placeholder="Email" class="w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7">
+                        <textarea name="pesan" id="" placeholder="Pesan"
+                            class="w-full h-24 px-4 bg-gray-100 py-3 shadow"></textarea>
+                    </div>
+                    <div class="w-full mb-7 flex justify-center">
+                        <img src="images/qris.jpg" class="h-60" alt="">
+                        <!-- <div id="result" class="hidden">
+                        <div class="divider"></div>
+                        <div id="qrimage" class="flex justify-center"></div>
+                    </div>
+                    <script>                        
+                        let result = document.getElementById('result');
+                        let qrimage = document.getElementById('qrimage');
+
+                        let image = new Image();
+
+                        // buat kode qr nya dari api
+                        image.src = `https://api.qrserver.com/v1/create-qr-code?size=150x150&data=tegar`;
+
+                        // kalau image.src itu udah ke load
+                        image.onload = function () {
+                            // ubah element di dalam #qrimage dengan tag img yang diisi gambar qr code tadi
+                            qrimage.innerHTML = `<img src="${image.src}" class="flex-initial w-96" alt="qr" />`;
+
+                            // hilangkan class hidden pada #result agar tag/element apa saja yang ada di dalam #result akan keliatan
+                            result.classList.remove("hidden");
+                        }
+                    </script> -->
+                    </div>
+                    <div class="w-full mb-7">
+                        <input type="file" name="" id=""
+                            class="w-full file:mr-5 file:py-1 file:px-3 file:border-none file:w-full file:bg-stone-50 file:text-stone-700 hover:file:cursor-pointer hover:file:bg-blue-50 hover:file:text-blue-700">
+                    </div>
+                    <div class="mb-3">
+                        <p>
+                            Dengan mengisi formulir ini, donatur akan menerima Bukti Setor Zakat (BSZ), laporan
+                            penyaluran, info layanan Zakat melalui email & whatsapp.
+                        </p>
+                    </div>
+                    <div class="w-full">
+                        <button type="submit"
+                            class="bg-first font-semibold text-white px-4 py-3 w-full rounded">Tunaikan</button>
+                    </div>
+                </form>
+
+                <form id="formKalkulator" action="" class="flex flex-col items-center w-full">
+                    <div class="w-full mb-7 flex flex-col gap-3">
+                        <label for="emas">Nilai emas, perak, dan/atau permata</label>
+                        <input id="emas" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7 flex flex-col gap-3">
+                        <label for="uang">Uang tunai, tabungan, deposito</label>
+                        <input id="uang" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7 flex flex-col gap-3">
+                        <label for="aset">Kendaraan, rumah, aset lain</label>
+                        <input id="aset" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="w-full mb-7 flex flex-col gap-3">
+                        <label for="hutang">Jumlah hutang/cicilan (optional)</label>
+                        <input id="hutang" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                    </div>
+                    <div class="flex w-full gap-5">
+                        <button type="reset"
+                            class="bg-gray-600 font-semibold text-white px-4 py-3 w-full rounded">Reset</button>
+                        <button type="submit"
+                            class="bg-first font-semibold text-white px-4 py-3 w-full rounded">Hitung</button>
+                    </div>
+
+                    <script>
+                        $(function () {
+                            $('input').on("input change", function () {
+                                // zakat penghasilan
+                                var emas = parseInt($('#emas').val().replace(/\./g, ""));
+                                var uang = parseInt($('#uang').val().replace(/\./g, ""));
+                                var aset = parseInt($('#aset').val().replace(/\./g, ""));
+                                var hutang = parseInt($('#hutang').val().replace(/\./g, ""));                                
+                                // var rs = parseInt(pp) + parseInt(pl);
+                                // // if (isNaN(rs)) {
+                                // //     rs = 0
+                                // // }
+                                // // $('input[name=jumlah_penghasilan]').val(formatNumber(rs));
+
+                            });
+                        });
+
+                        function hitungPenghasilan() {
+                            // var emas = parseInt($('input[name=harga_emas]').val().replace(/\./g, ""));
+                            // var nishab = Math.ceil((emas*85)/12);
+                            var nisab = parseInt($('input[name=txt_nishab]').val().replace(/\./g, ""));
+                            var tp = parseInt($("input[name=jumlah_penghasilan").val().replace(/\./g, ""));
+
+                            var total = Math.ceil(parseInt(tp) * (0.025));
+                            // console.log(emas, nishab, tp);
+                            if (tp < nisab) {
+                                $(".under_nishab").show();
+                                $(".zakat_penghasilan").hide();
+                                // $(".btn_hitung_penghasilan").hide();
+                                // $(".btn_reset_penghasilan").show();
+                            } else {
+                                $(".zakat_penghasilan").show();
+                                $(".under_nishab").hide();
+                                $("input[name=total_zakat]").val(formatNumber(total));
+                                $(".btn_hitung_penghasilan").hide();
+                                $(".btn_bayar_penghasilan").show();
+                            }
+                        }
+
+                        function resetPenghasilan(argument) {
+                            $("input[name=pendapatan_perbulan],input[name=pendapatan_lain],input[name=cicilan],input[name=jumlah_penghasilan],input[name=total_zakat]").val(0);
+                            $(".btn_hitung_penghasilan").show();
+                            $(".btn_bayar_penghasilan").hide();
+                            $(".zakat_penghasilan").hide();
+                            $(".under_nishab").hide();
+                        }
+
+                        function formatNumber(num) {
+                            return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+                        }
+
+                        function hitungZakperJasa() {
+                            let bruto = parseInt($('#pdp_pre_pajak').val().replace(/\./g, ""));
+                            var nisab_thn = parseInt($('input[name=txt_nishab_pertahun]').val().replace(/\./g, ""));
+
+                            if (bruto < nisab_thn) {
+                                $(".under_nishab").show();
+                                $(".total_zakper_jasa").hide();
+                                // $(".btn_hitung_penghasilan").hide();
+                                // $(".btn_reset_penghasilan").show();
+                            } else {
+                                $("input[name=zakper_jasa]").val(formatNumber(bruto * 0.025));
+                                $(".total_zakper_jasa").show();
+                                $(".btn_bayar_zakper").show();
+                                $(".btn_zakper_jasa").hide();
+                            }
+                        }
+
+                        function resetZakperJasa() {
+                            $("#pdp_pre_pajak, input[name=zakper_jasa]").val(0);
+                            $(".btn_bayar_zakper").hide();
+                            $(".btn_zakper_jasa").show();
+                            $(".total_zakper_jasa").hide();
+                            $(".under_nishab").hide();
+                        }
+
+                        function hitungZakperNiaga() {
+                            let tp = parseInt($('input[name=jml_omset]').val().replace(/\./g, ""));
+                            // console.log(tp*0.025);
+                            var nisab_thn = parseInt($('input[name=txt_nishab_pertahun]').val().replace(/\./g, ""));
+
+                            if (tp < nisab_thn) {
+                                $(".under_nishab").show();
+                                $(".total_zakper_niaga").hide();
+                                // $(".btn_hitung_penghasilan").hide();
+                                // $(".btn_reset_penghasilan").show();
+                            } else {
+                                $("#jml_zakper_niaga").val(formatNumber(tp * 0.025));
+                                $(".total_zakper_niaga").show();
+                                $(".btn_bayar_niaga").show();
+                                $(".btn_zakper_niaga").hide();
+                            }
+                        }
+
+                        function resetZakperNiaga() {
+                            $("input[name=zakper_aktiva], input[name=zakper_pasiva], input[name=jml_omset]").val(0);
+                            $(".btn_bayar_niaga").hide();
+                            $(".btn_zakper_niaga").show();
+                            $(".total_zakper_niaga").hide();
+                            $(".under_nishab").hide();
+                        }
+
+                        function hitungZakPerdagangan() {
+                            let zp = parseInt($('#jumlah_aset').val().replace(/\./g, ""));
+                            let hn = parseInt($('#haul_nishab').val().replace(/\./g, ""));
+                            if (zp < hn) {
+                                $(".nishab_zak").show();
+                                $(".zakat_perdagangan").hide();
+                            } else {
+                                $("#jml_zak_per").val(formatNumber(zp * 0.025));
+                                $(".zakat_perdagangan").show();
+                                $(".btn_bayar_perdagangan").show();
+                                $(".btn_zak_per").hide();
+                            }
+                        }
+
+                        function resetZakPerdagangan() {
+                            $("#aset_lancar, #laba, #hutang, #jumlah_aset, #harga_emas2, #jml_zak_per").val(0);
+                            $(".btn_bayar_perdagangan").hide();
+                            $(".btn_zak_per").show();
+                            $(".zakat_perdagangan").hide();
+                            $(".nishab_zak").hide();
+                        }
+
+                        function hitungZakEmas() {
+                            let zm = parseInt($('#txt_emas').val().replace(/\./g, ""));
+                            let hn2 = parseInt($('#haul_nishab2').val().replace(/\./g, ""));
+                            if (zm < hn2) {
+                                $(".info_nishab").show();
+                                $(".jml_zak_ms").hide();
+                            } else {
+                                $("#jml_zak_ms").val(formatNumber(zm * 0.025));
+                                $(".jml_zak_ms").show();
+                                $(".btn_bayar_ms").show();
+                                $(".btn_zak_ms").hide();
+                            }
+                        }
+
+                        function resetZakEmas() {
+                            $("#txt_emas, #jml_zak_ms").val(0);
+                            $(".btn_bayar_ms").hide();
+                            $(".btn_zak_ms").show();
+                            $(".jml_zak_ms").hide();
+                            $(".info_nishab").hide();
+                        }
+
+                        function bayarSedekah() {
+                            window.location = 'https://baznas.go.id/sedekahbaznas';
+                        }
+
+                        function bayarZakat(type) {
+                            if (type == 'zakpro') {
+                                var jns = 'profesi';
+                                var jml = $("input[name=total_zakat]").val();
+                            } else if (type == 'zakPerJasa') {
+                                var jns = 'maal';
+                                var jml = $("input[name=zakper_jasa]").val();
+                            } else if (type == 'zakPerNiaga') {
+                                var jns = 'maal';
+                                var jml = $("#jml_zakper_niaga").val();
+                            } else if (type == 'zakPer') {
+                                var jns = 'maal';
+                                var jml = $("#jml_zak_per").val();
+                            } else if (type == 'emas') {
+                                var jns = 'maal';
+                                var jml = $("#jml_zak_ms").val();
+                            } else {
+                                var jns = '';
+                                var jml = 0;
+                            }
+
+                            window.location = 'https://baznas.go.id/bayarzakat?jenis=' + jns + '&param1=0&param2=0&param3=0&param4=0&jumlah=' + jml + '';
+                        }
+
+
+                        function formatRupiah(angka, prefix) {
+                            var number_string = angka.replace(/[^,\d]/g, '').toString(),
+                                split = number_string.split(','),
+                                sisa = split[0].length % 3,
+                                rupiah = split[0].substr(0, sisa),
+                                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+                            // tambahkan titik jika yang di input sudah menjadi angka ribuan
+                            if (ribuan) {
+                                separator = sisa ? '.' : '';
+                                rupiah += separator + ribuan.join('.');
+                            }
+
+                            rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+                            return prefix == undefined ? rupiah : (rupiah ? '' + rupiah : '');
+                        }
+
+                        $(".calculator-item").keyup(function (e) {
+                            var nilai = formatRupiah($(this).val(), '');
+                            $(this).val(nilai.replace(/^0+/, ''));
+                        })
+
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-8 bg-gray-900 text-white">
+        <div class="container mx-auto flex flex-wrap">
+            <!-- Kolom Pertama -->
+            <div class="w-full lg:w-2/6 px-4">
+                <h3 class="text-xl font-landing font-bold mb-4">Yayasan Daarussa'adah Mubarokah</h3>
+                <p class="font-landing text-gray-300 mb-4">Yayasan Islam Daarussa'adah Mubarokah adalah sebuah lembaga
+                    sosial dan dakwah, mendirikan sarana ibadah baik masjid ataupun mushola dan pesantren, pengadaan
+                    sumur
+                    air bersih serta membantu anak yatim, fakir dan miskin.</p>
+            </div>
+            <!-- Kolom Kedua -->
+            <div class="w-full lg:w-2/6 px-4">
+                <h3 class="text-xl font-landing font-bold mb-4">Hubungi Kami</h3>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-phone h-6 w-6 mr-2"></i>
+                    <span class="font-landing">+62 87891987242</span>
+                </div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-envelope h-6 w-6 mr-2"></i>
+                    <span class="font-landing">yayasandarussadah@gmail.com</span>
+                </div>
+                <div class="flex items-center mt-2">
+                    <i class="fa-solid fa-house h-6 w-6 mr-2"></i>
+                    <span class="font-landing">Alamat: Jl. Raya Kapten Yusuf, Cimanglid Gg. Purnama RT 05/01 PO.Box 01
+                        Ciomas, 16610, No. 61 Ds. Sukamantri, Kec. Tamansari, Kab. Bogor – Jawa Barat</span>
+                </div>
+            </div>
+            <div class="w-full lg:w-2/6 px-4">
+                <h3 class="text-xl font-landing font-bold mb-4">REKENING DONASI</h3>
+                <div class="flex items-center mb-4">
+                    <span class="font-landing">BSI SYARIAH | 087871771</span>
+                </div>
+                <div class="flex items-center mb-4">
+                    <span class="font-landing">BSI SYARIAH | 087871771</span>
+                </div>
+                <div class="flex items-center mb-4">
+                    <span class="font-landing">BSI SYARIAH | 087871771</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="main.js"></script>
+    <script src="tailwind.config.js"></script>
+</body>
+
+</html>

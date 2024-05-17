@@ -45,9 +45,13 @@
                     <li class="nav__dropdown">
                         <a href="#" class="nav__dropdown__title">Layanan <i class="ri-arrow-drop-down-line"></i></a>
                         <ul class="nav__dropdown__list">
-                            <li class="nav__dropdown__item"><a href="zakat.html" class="nav__dropdown__link">Zakat</a>
+                            <li class="nav__dropdown__item"><a href="zakat-fitrah.html"
+                                    class="nav__dropdown__link">Zakat Fitrah</a>
                             </li>
-                            <li class="nav__dropdown__item"><a href="donasi.html" class="nav__dropdown__link">Donasi</a></li>
+                            <li class="nav__dropdown__item"><a href="zakat-mal.html" class="nav__dropdown__link">Zakat
+                                    Mal</a></li>
+                            <li class="nav__dropdown__item"><a href="donasi.html" class="nav__dropdown__link">Donasi</a>
+                            </li>
                             <!-- <li class="nav__dropdown__item"><a href="faq.html" class="nav__dropdown__link">FAQ</a></li> -->
                         </ul>
                     </li>
@@ -125,119 +129,35 @@
         <i class="ri-close-line login__close" id="login-close"></i>
     </div>
 
-    <div class="w-3/4 my-[100px] mx-auto drop-shadow">
-        <div class="flex flex-wrap lg:flex-nowrap">
-            <div class="w-full flex bg-first p-5 space-y-3 rounded-t-lg lg:rounded-none lg:rounded-l-lg">
-                <div>
-                    <div class="font-body text-white text-2xl text-center font-bold mt-12">Zakat Fitrah</div>
-                    <div class="font-body text-white text-center mt-12">
-                        <p>Zakat fitrah adalah zakat yang wajib dikeluarkan seorang muslim pada bulan Ramadhan.
-
-                            Besar zakat ini setara dengan 3,5 liter atau 2,7 kilogram makanan pokok yang ada di daerah
-                            bersangkutan seperti beras, gandum dan sejenisnya.</p>
-
-                    </div>
-                    <div class="font-body text-white text-center">
-                        Harga beras saat ini sekitar Rp15.000,00/kg
-                    </div>
+    <div class="w-3/4 mb-[100px] mx-auto drop-shadow">
+        <a href="form-zakat-fitrah.html">
+            <img src="images/header-zakat-fitrah.jpg" alt="">
+        </a>
+        <div class="flex flex-col p-10 bg-white">
+            <div class="font-bold text-black text-2xl mb-5">Tentang Zakat Fitrah</div>
+            <div class="bg-first p-5 drop-shadow-lg">
+                <p class="text-white">
+                    Zakat fitrah (zakat al-fitr) adalah zakat yang diwajibkan atas setiap jiwa baik lelaki dan perempuan muslim yang dilakukan pada bulan Ramadhan pada Idul Fitri. Sebagaimana hadist Ibnu Umar ra, "Rasulullah SAW mewajibkan zakat fitrah satu sha’ kurma atau satu sha’ gandum atas umat muslim; baik hamba sahaya maupun merdeka, laki-laki maupun perempuan, kecil maupun besar. Beliau saw memerintahkannya dilaksanakan sebelum orang-orang keluar untuk shalat." (HR Bukhari Muslim)
+                </p>                
+            </div>
+            <div>
+                <p class="text-black mt-8">
+                    Selain untuk mensucikan diri setelah menunaikan ibadah di bulan Ramadhan, zakat fitrah juga dapat dimaknai sebagai bentuk kepedulian terhadap orang yang kurang mampu, membagi rasa kebahagiaan dan kemenangan di hari raya yang dapat dirasakan semuanya termasuk masyarakat miskin yang serba kekurangan.
+                </p>
+                <p class="text-black mt-5">
+                    Zakat fitrah wajib ditunaikan bagi setiap jiwa, dengan syarat beragama Islam, hidup pada saat bulan Ramadhan, dan memiliki kelebihan rezeki atau kebutuhan pokok untuk malam dan Hari Raya Idul Fitri. Besarannya adalah beras atau makanan pokok seberat 2,5 kg atau 3,5 liter per jiwa.
+                </p>
+                <p class="text-black mt-5">
+                    Berdasarkan SK Ketua BAZNAS No. 10 Tahun 2024 tentang Nilai Zakat Fitrah dan Fidyah untuk wilayah Jakarta, Bogor, Depok, Tangerang dan Bekasi, ditetapkan bahwa nilai zakat fitrah setara dengan uang sebesar Rp45.000,-/hari/jiwa.
+                </p>
+                <div class="font-bold text-black mt-5">
+                    <p class="text-black">
+                        Klik Bayar Zakat Fitrah <a href="form-zakat-fitrah.html" class="underline text-first">disini!</a>
+                    </p>
                 </div>
             </div>
-            <div class="w-full flex flex-col bg-white p-5 space-y-3 rounded-b-lg lg:rounded-none lg:rounded-r-lg">
-                <div class="text-2xl text-center">Formulir Zakat</div>
-                <form action="" class="space-y-3">
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="nominal"
-                            placeholder="Masukan nomimal">
-                    </div>
-                    <div class="w-full">
-                        <select name="" id="" class="bg-gray-100 p-2 rounded w-full">
-                            <option value="Pilih" selected>Pilih pembayaran</option>
-                            <option value="BSI">BSI</option>
-                            <option value="BCA">BCA</option>
-                            <option value="BRI">BRI</option>
-                        </select>
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="nama" placeholder="Nama">
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="no_hp" placeholder="No HP">
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="email" placeholder="Email">
-                    </div>
-                    <div class="w-full">
-                        <textarea name="harapan" id="" class="bg-gray-100 p-2 rounded w-full h-16"
-                            placeholder="Harapan dan Doa"></textarea>
-                    </div>
-
-                    <div class="flex justify-center">
-                        <button type="submit" class="w-16 h-8 bg-first rounded btn text-white text-center font-body">
-                            Kirim
-                        </button>
-                    </div>
-                </form>
-            </div>
-
         </div>
     </div>
-
-    <!-- <div class="w-3/4 my-[100px] mx-auto">
-        <div class="grid grid-rows-1 grid-cols-2">
-            <div class="flex bg-first p-5 rounded-l-lg space-y-3">
-                <div>
-                    <div class="font-body text-white text-2xl text-center font-bold mt-12">Zakat Fitrah</div>
-                    <div class="font-body text-white text-center mt-12">
-                        <p>Zakat fitrah adalah zakat yang wajib dikeluarkan seorang muslim pada bulan Ramadhan.
-
-                            Besar zakat ini setara dengan 3,5 liter atau 2,7 kilogram makanan pokok yang ada di daerah
-                            bersangkutan seperti beras, gandum dan sejenisnya.</p>
-
-                    </div>
-                    <div class="font-body text-white text-center">
-                        Harga beras saat ini sekitar Rp15.000,00/kg
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-5 rounded-r-lg space-y-3">
-                <div class="text-2xl text-center">Formulir Zakat</div>
-                <form action="" class="space-y-3 px-5">
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="nominal"
-                            placeholder="Masukan nomimal">
-                    </div>
-                    <div class="w-full">
-                        <select name="" id="" class="bg-gray-100 p-2 rounded w-full">
-                            <option value="Pilih" selected>Pilih pembayaran</option>
-                            <option value="BSI">BSI</option>
-                            <option value="BCA">BCA</option>
-                            <option value="BRI">BRI</option>
-                        </select>
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="nama" placeholder="Nama">
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="no_hp" placeholder="No HP">
-                    </div>
-                    <div class="w-full">
-                        <input class="bg-gray-100 p-2 rounded w-full" type="text" name="email" placeholder="Email">
-                    </div>
-                    <div class="w-full">
-                        <textarea name="harapan" id="" class="bg-gray-100 p-2 rounded w-full h-16"
-                            placeholder="Harapan dan Doa"></textarea>
-                    </div>
-
-                    <div class="flex justify-center">
-                        <button type="submit" class="w-16 h-8 bg-first rounded btn text-white text-center font-body">
-                            Kirim
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    </div> -->
 
     <footer class="py-8 bg-gray-900 text-white">
         <div class="container mx-auto flex flex-wrap">
