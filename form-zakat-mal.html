@@ -163,10 +163,25 @@
                         <input type="text" placeholder="Bin / Binti" class="w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7">
-                        <input type="number" placeholder="Nominal" class="w-full px-4 bg-gray-100 py-3 shadow">
+                        <input type="text" placeholder="Nominal"
+                            class="input-number w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7">
-                        <input type="text" placeholder="No. Telepon" class="w-full px-4 bg-gray-100 py-3 shadow">
+                        <input type="text" placeholder="No. Telepon"
+                            class="telepon w-full px-4 bg-gray-100 py-3 shadow">
+                        <script>
+                            function formatAngka(angka) {
+                                var number_string = angka.replace(/[^,\d]/g, '').toString(); //Menghapus huruf                            
+                                return number_string;
+                            }
+
+                            $(".telepon").keyup(function (e) {
+                                {
+                                    
+                                    $(this).val(formatAngka($(this).val()))
+                                }
+                            })
+                        </script>
                     </div>
                     <div class="w-full mb-7">
                         <input type="email" placeholder="Email" class="w-full px-4 bg-gray-100 py-3 shadow">
@@ -219,26 +234,26 @@
                 <form id="formKalkulator" action="" class="flex flex-col items-center w-full hidden">
                     <div class="w-full mb-7 flex flex-col gap-3">
                         <label for="emas">Nilai emas, perak, dan/atau permata</label>
-                        <input id="emas" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                        <input id="emas" type="text" class="input-number w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7 flex flex-col gap-3">
                         <label for="uang">Uang tunai, tabungan, deposito</label>
-                        <input id="uang" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                        <input id="uang" type="text" class="input-number w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7 flex flex-col gap-3">
                         <label for="aset">Kendaraan, rumah, aset lain</label>
-                        <input id="aset" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                        <input id="aset" type="text" class="input-number w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7 flex flex-col gap-3">
                         <label for="hutang">Jumlah hutang/cicilan (optional)</label>
-                        <input id="hutang" type="text" class="calculator-item w-full px-4 bg-gray-100 py-3 shadow">
+                        <input id="hutang" type="text" class="input-number w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7 flex flex-col gap-3 zakat-harus-bayar">
 
                     </div>
                     <div class="flex w-full gap-5">
-                        <button type="reset"
-                            class="bg-gray-600 font-semibold text-white px-4 py-3 w-full rounded" onclick="resetKalkulator()">Reset</button>
+                        <button type="reset" class="bg-gray-600 font-semibold text-white px-4 py-3 w-full rounded"
+                            onclick="resetKalkulator()">Reset</button>
                         <button type="button" class="bg-first font-semibold text-white px-4 py-3 w-full rounded"
                             onclick="hitungZakat()">Hitung</button>
                     </div>
@@ -272,21 +287,21 @@
                         });
 
                         function resetKalkulator() {
-                            $('.zakat-harus-bayar').html("");   
+                            $('.zakat-harus-bayar').html("");
                         }
 
                         function hitungZakat() {
-                            var emas = parseInt($('#emas').val()) ? parseInt($('#emas').val().replace(/\./g, "")) : 0 ; // Menghapus titik
-                            var uang = parseInt($('#uang').val()) ? parseInt($('#uang').val().replace(/\./g, "")) : 0 ; // Menghapus titik
-                            var aset = parseInt($('#aset').val()) ? parseInt($('#aset').val().replace(/\./g, "")) : 0 ; // Menghapus titik
-                            var hutang = parseInt($('#hutang').val()) ? parseInt(($('#hutang').val()).replace(/\./g, "")) : 0 ; // Menghapus titik
+                            var emas = parseInt($('#emas').val()) ? parseInt($('#emas').val().replace(/\./g, "")) : 0; // Menghapus titik
+                            var uang = parseInt($('#uang').val()) ? parseInt($('#uang').val().replace(/\./g, "")) : 0; // Menghapus titik
+                            var aset = parseInt($('#aset').val()) ? parseInt($('#aset').val().replace(/\./g, "")) : 0; // Menghapus titik
+                            var hutang = parseInt($('#hutang').val()) ? parseInt(($('#hutang').val()).replace(/\./g, "")) : 0; // Menghapus titik
 
                             var total = emas + uang + aset - hutang
                             if (total >= 112540000) {
                                 zakat_mal = total * 0.025
-                                zakat_mal = formatRupiah(zakat_mal.toString(), '').replace(/^0+/, '')                            
+                                zakat_mal = formatRupiah(zakat_mal.toString(), '').replace(/^0+/, '')
                             } else {
-                                zakat_mal = 0                            
+                                zakat_mal = 0
                             }
 
                             $('.zakat-harus-bayar').html(`                                
@@ -313,7 +328,7 @@
                         }
 
 
-                        $(".calculator-item").keyup(function (e) {
+                        $(".input-number").keyup(function (e) {
                             var nilai = formatRupiah($(this).val(), '');
                             $(this).val(nilai.replace(/^0+/, '')); // Menghapus 0 sebelum angka selain 0
                         })
