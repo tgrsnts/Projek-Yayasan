@@ -20,6 +20,9 @@
     <!--=============== Fontawesome ===============-->
     <script src="https://kit.fontawesome.com/f87eaab4e6.js" crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <title>Yayasan Darusaa'adah Mubarakah </title>
 </head>
 
@@ -152,7 +155,19 @@
                         <input type="text" placeholder="Bin / Binti" class="w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7">
-                        <input type="text" placeholder="No. Telepon" class="w-full px-4 bg-gray-100 py-3 shadow">
+                        <input type="text" placeholder="No. Telepon" class="w-full px-4 bg-gray-100 py-3 shadow telepon">
+                        <script>
+                            function formatAngka(angka) {
+                                var number_string = angka.replace(/[^,\d]/g, '').toString(); //Menghapus huruf                            
+                                return number_string;
+                            }
+
+                            $(".telepon").keyup(function (e) {
+                                {
+                                    $(this).val(formatAngka($(this).val()))
+                                }
+                            })
+                        </script>
                     </div>
                     <div class="w-full mb-7">
                         <input type="email" placeholder="Email" class="w-full px-4 bg-gray-100 py-3 shadow">
