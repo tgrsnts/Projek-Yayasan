@@ -155,19 +155,8 @@
                         <input type="text" placeholder="Bin / Binti" class="w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7">
-                        <input type="text" placeholder="No. Telepon" class="w-full px-4 bg-gray-100 py-3 shadow telepon">
-                        <script>
-                            function formatAngka(angka) {
-                                var number_string = angka.replace(/[^,\d]/g, '').toString(); //Menghapus huruf                            
-                                return number_string;
-                            }
-
-                            $(".telepon").keyup(function (e) {
-                                {
-                                    $(this).val(formatAngka($(this).val()))
-                                }
-                            })
-                        </script>
+                        <input type="text" placeholder="No. Telepon"
+                            class="w-full px-4 bg-gray-100 py-3 shadow">
                     </div>
                     <div class="w-full mb-7">
                         <input type="email" placeholder="Email" class="w-full px-4 bg-gray-100 py-3 shadow">
@@ -235,18 +224,18 @@
                 </p>
             </div>
             <!-- Kolom Kedua -->
-            <div class="w-full lg:w-1/2 px-5">
+            <div class="flex flex-col gap-2 w-full lg:w-1/2 px-5">
                 <h3 class="text-xl font-landing font-bold mb-4">Hubungi Kami</h3>
-                <div class="flex items-center mb-4">
-                    <i class="fa-solid fa-phone h-6 w-6 mr-2"></i>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
                     <span class="font-landing">+62 87891987242</span>
                 </div>
-                <div class="flex items-center mb-4">
-                    <i class="fa-solid fa-envelope h-6 w-6 mr-2"></i>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i>
                     <span class="font-landing">yayasandarussadah@gmail.com</span>
                 </div>
-                <div class="flex items-center mt-2">
-                    <i class="fa-solid fa-house h-6 w-6 mr-2"></i>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-house"></i>
                     <span class="font-landing">Alamat: Jalan Rawamangun Utara II RT 011 RW 01 no. 24, Kelurahan
                         Rawasari,
                         Kecamatan Cempaka Putih, Jakarta Pusat.</span>
